@@ -13,13 +13,13 @@
 }
 
 [data-theme='dark'] {
-  --bg: #0B0B0C;
-  --surface: #141416;
-  --fg: #F5F5F2;
-  --fg-muted: #9A9AA0;
-  --rule: #222226;
-  --accent: #3B82F6;
-  --accent-soft: #0E1A33;
+  --bg: oklch(0.165 0.012 264);         /* near-black, faint cool blue — not #000 */
+  --surface: oklch(0.205 0.014 264);    /* lifted panel */
+  --fg: oklch(0.955 0.005 264);         /* off-white, faint cool tint — not #fff */
+  --fg-muted: oklch(0.715 0.016 264);   /* muted cool gray, AA on --bg */
+  --rule: oklch(0.305 0.014 264);       /* hairline */
+  --accent: oklch(0.70 0.16 264);       /* brighter blue — pops on dark, legible */
+  --accent-soft: oklch(0.32 0.055 264); /* deep blue-tinted row hover bg */
 }
 
 html {

@@ -6,7 +6,7 @@ const en = {
     contato: 'Contact',
   },
   hero: {
-    name: 'Rodolfo Engelmann',
+    name: 'Rodolfo Henrique Raymundo Engelmann',
     role: 'Computer Engineering · Developer',
     bio: 'Computer Engineering student at Instituto Federal de São Paulo. Interested in software development — Python, backend and web.',
     status: 'Open to opportunities',
@@ -18,6 +18,21 @@ const en = {
     contato: 'Contact',
   },
   placeholder: 'Under construction',
+  theme: {
+    toDark: 'Switch to dark theme',
+    toLight: 'Switch to light theme',
+  },
+  projects: [
+    {
+      title: 'QR Studio',
+      description:
+        'A desktop QR code generator: fast, beautiful and fully offline. Five content types (URL, text, Wi-Fi, email, vCard), full styling and PNG/SVG export.',
+      stack: ['React', 'Vite', 'Tauri', 'Rust', 'qr-code-styling'],
+      href: 'https://github.com/RodolfoHRE/qr_studio',
+      live: 'https://rodolfohre.github.io/qr_studio/',
+      liveLabel: 'Live',
+    },
+  ],
   footer: 'Built with Next.js',
 };
 

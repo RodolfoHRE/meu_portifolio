@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import { useI18n } from '@/lib/i18n';
 import LangToggle from './LangToggle';
+import ThemeToggle from './ThemeToggle';
 
 const anchors = ['sobre', 'projetos', 'skills', 'contato'];
 
@@ -43,8 +44,11 @@ export default function Nav() {
       className={`sticky top-0 z-50 bg-bg/80 backdrop-blur transition-all duration-200 ${padY} ${border}`}
     >
       <div className="mx-auto max-w-[1120px] px-6 flex items-center justify-between">
-        <a href="#sobre" className="font-medium tracking-tight text-fg">
-          Rodolfo Engelmann
+        <a
+          href="#sobre"
+          className="font-medium tracking-tight text-fg whitespace-nowrap leading-tight text-[0.8125rem] sm:text-sm md:text-base"
+        >
+          Rodolfo Henrique Raymundo Engelmann
         </a>
 
         <nav className="hidden md:flex items-center gap-8" aria-label="Primary">
@@ -62,8 +66,10 @@ export default function Nav() {
           ))}
         </nav>
 
-        <div className="hidden md:block">
+        <div className="hidden md:flex md:items-center md:gap-4">
           <LangToggle />
+          <span className="h-4 w-px bg-rule" aria-hidden="true" />
+          <ThemeToggle />
         </div>
 
         <button
@@ -91,8 +97,10 @@ export default function Nav() {
               {t.nav[id]}
             </a>
           ))}
-          <div className="mt-4">
+          <div className="mt-4 flex items-center gap-4">
             <LangToggle />
+            <span className="h-4 w-px bg-rule" aria-hidden="true" />
+            <ThemeToggle />
           </div>
         </div>
       )}
