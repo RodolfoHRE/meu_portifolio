@@ -32,6 +32,15 @@ const en = {
       live: 'https://rodolfohre.github.io/qr_studio/',
       liveLabel: 'Live',
     },
+    {
+      title: 'echo karaoke',
+      description:
+        'A desktop karaoke app built with Electron. Searches YouTube, builds a queue, favorites and plays — all with a custom UI. Packaged for Windows and Linux via CI, with no API key embedded: users configure their own in-app.',
+      stack: ['Electron', 'JavaScript', 'YouTube API', 'GitHub Actions', 'Desktop'],
+      href: 'https://github.com/RodolfoHRE/Projeto-karaoke',
+      live: 'https://rodolfohre.github.io/Projeto-karaoke/',
+      liveLabel: 'Live',
+    },
   ],
   footer: 'Built with Next.js',
 };
