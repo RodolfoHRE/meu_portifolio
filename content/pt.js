@@ -32,6 +32,15 @@ const pt = {
       live: 'https://rodolfohre.github.io/qr_studio/',
       liveLabel: 'Ver site',
     },
+    {
+      title: 'echo karaoke',
+      description:
+        'App de karaokê para desktop em Electron. Busca vídeos no YouTube, monta fila, favorita e toca — tudo com UI própria em pt-BR. Empacotado para Windows e Linux via CI, sem nenhuma chave de API embarcada: o usuário configura a dele in-app.',
+      stack: ['Electron', 'JavaScript', 'YouTube API', 'GitHub Actions', 'Desktop'],
+      href: 'https://github.com/RodolfoHRE/Projeto-karaoke',
+      live: 'https://rodolfohre.github.io/Projeto-karaoke/',
+      liveLabel: 'Ver site',
+    },
   ],
   footer: 'Feito com Next.js',
 };
