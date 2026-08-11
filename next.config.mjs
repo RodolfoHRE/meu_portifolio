@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
+import { repo } from './lib/basePath.mjs';
+
 const isProd = process.env.NODE_ENV === 'production';
-const repo = 'meu_portifolio';
 
 const nextConfig = {
   output: 'export',

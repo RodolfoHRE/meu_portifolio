@@ -18,6 +18,31 @@ const pt = {
     contato: 'Contato',
   },
   placeholder: 'Em construção',
+  contato: {
+    heading: 'Entre em contato',
+    prose:
+      'Estou aberto a oportunidades júnior em Python, backend e desenvolvimento web. Fique à vontade para entrar em contato pelos canais abaixo.',
+    links: [
+      {
+        label: 'Email',
+        value: 'rodolfohrengelmann@gmail.com',
+        href: 'mailto:rodolfohrengelmann@gmail.com',
+      },
+      {
+        label: 'LinkedIn',
+        value: 'rodolfo-h-raymundo-engelmann',
+        href: 'https://www.linkedin.com/in/rodolfo-h-raymundo-engelmann/',
+      },
+      {
+        label: 'GitHub',
+        value: 'RodolfoHRE',
+        href: 'https://github.com/RodolfoHRE',
+      },
+    ],
+    cvLabel: 'Currículo',
+    cvValue: 'PDF (pt-BR)',
+    cvFile: 'curriculo-rodolfo-pt.pdf',
+  },
   theme: {
     toDark: 'Ativar tema escuro',
     toLight: 'Ativar tema claro',
