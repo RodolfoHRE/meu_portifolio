@@ -1,5 +1,7 @@
-export default function ProjectRow({ index, title, description, stack = [], href, live, liveLabel = 'Live' }) {
+export default function ProjectRow({ index, title, description, stack = [], href, live, liveLabel = 'Live', repoLabel = 'GitHub' }) {
   const num = String(index).padStart(2, '0');
+  // Clique geral da linha foca o site do projeto; sem site, cai pro repositório.
+  const primary = live || href;
 
   return (
     <li className="group relative border-t border-rule transition-colors duration-200 hover:bg-accent-soft">
@@ -12,7 +14,7 @@ export default function ProjectRow({ index, title, description, stack = [], href
           <h3 className="text-xl font-medium tracking-tight text-fg">
             {/* Stretched link: makes the whole row clickable without nesting anchors */}
             <a
-              href={href}
+              href={primary}
               target="_blank"
               rel="noopener noreferrer"
               className="rounded-sm outline-none after:absolute after:inset-0 focus-visible:ring-2 focus-visible:ring-accent"
@@ -28,17 +30,29 @@ export default function ProjectRow({ index, title, description, stack = [], href
               ))}
             </ul>
           )}
-          {live && (
+          {/* Ações explícitas: ficam acima do stretched link (z-10) para clique próprio. */}
+          <div className="relative z-10 mt-1 flex flex-wrap items-center gap-x-5 gap-y-1">
+            {live && (
+              <a
+                href={live}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex w-fit items-center gap-1.5 rounded-sm font-mono text-xs uppercase tracking-[0.08em] text-accent outline-none hover:underline focus-visible:ring-2 focus-visible:ring-accent"
+              >
+                {liveLabel}
+                <span aria-hidden="true">↗</span>
+              </a>
+            )}
             <a
-              href={live}
+              href={href}
               target="_blank"
               rel="noopener noreferrer"
-              className="relative z-10 mt-1 inline-flex w-fit items-center gap-1.5 rounded-sm font-mono text-xs uppercase tracking-[0.08em] text-accent outline-none hover:underline focus-visible:ring-2 focus-visible:ring-accent"
+              className="inline-flex w-fit items-center gap-1.5 rounded-sm font-mono text-xs uppercase tracking-[0.08em] text-accent outline-none hover:underline focus-visible:ring-2 focus-visible:ring-accent"
             >
-              {liveLabel}
+              {repoLabel}
               <span aria-hidden="true">↗</span>
             </a>
-          )}
+          </div>
         </div>
 
         <span
